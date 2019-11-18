@@ -1,6 +1,7 @@
 source("helpers.R")
 
 lnc.cis.cor <- readRDS("data/lnc.cis.cor.rds")
+lnc.trans.cor <- readRDS("data/lnc.trans.cor.rds")
 
 server <- function(input, output) {
   
@@ -17,7 +18,7 @@ server <- function(input, output) {
   
   # customize the length drop-down menu; display 5 rows per page by default
   output$mytable3 <- DT::renderDataTable({
-    DT::datatable(iris, options = list(lengthMenu = c(5, 30, 50), pageLength = 5))
+    DT::datatable(lnc.trans.cor, options = list(orderClasses = TRUE),rownames = FALSE)
   })
   
 }
