@@ -4,3 +4,4 @@
 .Ruserdata
 *.Rproj
 *.deploy.R
+lctdb/rsconnect/*
